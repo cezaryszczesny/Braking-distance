@@ -1,4 +1,4 @@
-import org.ietf.jgss.GSSName;
+import Vehicles.*;
 
 import javax.swing.*;
 import javax.swing.event.ChangeEvent;
@@ -43,11 +43,11 @@ public class Okno extends JFrame  implements ActionListener, ChangeListener  {
 
     List<String> rodzajPojazdu  = new ArrayList<String>();
     public void RodzajPojazdu() {
-        rodzajPojazdu.add("Samochod osobowy");
+        rodzajPojazdu.add("Vehicles.Samochod osobowy");
         rodzajPojazdu.add("Auto ciezarowe");
-        rodzajPojazdu.add("Autobus");
-        rodzajPojazdu.add("Tir");
-        rodzajPojazdu.add("Traktor");
+        rodzajPojazdu.add("Vehicles.Autobus");
+        rodzajPojazdu.add("Vehicles.Tir");
+        rodzajPojazdu.add("Vehicles.Traktor");
     }
     List<String> typNawierzchni  = new ArrayList<String>();
     public void TypNawierzchni(){
@@ -305,7 +305,7 @@ public class Okno extends JFrame  implements ActionListener, ChangeListener  {
             pojazd = comboPojazd.getSelectedItem().toString();
 
 
-            if(pojazd == "Samochod osobowy"){
+            if(pojazd == "Vehicles.Samochod osobowy"){
                 SamochodOsobowy samochodOsobowy = new SamochodOsobowy();
                 masa = samochodOsobowy.losujMase();
             }
@@ -313,11 +313,11 @@ public class Okno extends JFrame  implements ActionListener, ChangeListener  {
                 AutoCiezarowe AutoCiezarowe = new AutoCiezarowe();
                  masa = AutoCiezarowe.losujMase();
             }
-            else if(pojazd =="Autobus"){
+            else if(pojazd =="Vehicles.Autobus"){
                 Autobus Autobus = new Autobus();
                 masa = Autobus.losujMase();
             }
-            else if(pojazd == "Tir"){
+            else if(pojazd == "Vehicles.Tir"){
                 Tir Tir = new Tir();
                 masa =  Tir.losujMase();
             }
@@ -335,11 +335,11 @@ public class Okno extends JFrame  implements ActionListener, ChangeListener  {
                 AutoCiezarowe AutoCiezarowe = new AutoCiezarowe();
                 iloscOsi = AutoCiezarowe.liczbaOsi;
             }
-            else if(pojazd =="Autobus"){
+            else if(pojazd =="Vehicles.Autobus"){
                 Autobus Autobus = new Autobus();
                 iloscOsi = Autobus.liczbaOsi;
             }
-            else if(pojazd == "Tir"){
+            else if(pojazd == "Vehicles.Tir"){
                 Tir Tir = new Tir();
                 iloscOsi =  Tir.liczbaOsi;
             }

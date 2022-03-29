@@ -1,7 +1,9 @@
+package Vehicles;
+
 import java.util.Random;
 
 public class Samochod{
-    int masa;
+    protected int masa;
 
 
 
