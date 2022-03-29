@@ -36,18 +36,18 @@ public class Okno extends JFrame  implements ActionListener, ChangeListener  {
     boolean abs,wadaWzroku; //Do tych sie przypisuja wartosci
     String pojazd, plec, typ_Nawierzchni, stan_Nawierzchni; //Do tych sie przypisuja wartosci
 
-    //Wszystkie wartosci przypisuja sie dopiero po kliknieciu przyciusku oblicz.
-    //mozesz zmienic plik wyjsciowy csv, bo go nie zaktualizowałem
+
+
 
 
 
     List<String> rodzajPojazdu  = new ArrayList<String>();
     public void RodzajPojazdu() {
-        rodzajPojazdu.add("Vehicles.Samochod osobowy");
+        rodzajPojazdu.add("Samochod osobowy");
         rodzajPojazdu.add("Auto ciezarowe");
-        rodzajPojazdu.add("Vehicles.Autobus");
-        rodzajPojazdu.add("Vehicles.Tir");
-        rodzajPojazdu.add("Vehicles.Traktor");
+        rodzajPojazdu.add("Autobus");
+        rodzajPojazdu.add("Tir");
+        rodzajPojazdu.add("Traktor");
     }
     List<String> typNawierzchni  = new ArrayList<String>();
     public void TypNawierzchni(){
@@ -305,7 +305,7 @@ public class Okno extends JFrame  implements ActionListener, ChangeListener  {
             pojazd = comboPojazd.getSelectedItem().toString();
 
 
-            if(pojazd == "Vehicles.Samochod osobowy"){
+            if(pojazd == "Samochod osobowy"){
                 SamochodOsobowy samochodOsobowy = new SamochodOsobowy();
                 masa = samochodOsobowy.losujMase();
             }
@@ -313,11 +313,11 @@ public class Okno extends JFrame  implements ActionListener, ChangeListener  {
                 AutoCiezarowe AutoCiezarowe = new AutoCiezarowe();
                  masa = AutoCiezarowe.losujMase();
             }
-            else if(pojazd =="Vehicles.Autobus"){
+            else if(pojazd =="Autobus"){
                 Autobus Autobus = new Autobus();
                 masa = Autobus.losujMase();
             }
-            else if(pojazd == "Vehicles.Tir"){
+            else if(pojazd == "Tir"){
                 Tir Tir = new Tir();
                 masa =  Tir.losujMase();
             }
@@ -335,11 +335,11 @@ public class Okno extends JFrame  implements ActionListener, ChangeListener  {
                 AutoCiezarowe AutoCiezarowe = new AutoCiezarowe();
                 iloscOsi = AutoCiezarowe.liczbaOsi;
             }
-            else if(pojazd =="Vehicles.Autobus"){
+            else if(pojazd =="Autobus"){
                 Autobus Autobus = new Autobus();
                 iloscOsi = Autobus.liczbaOsi;
             }
-            else if(pojazd == "Vehicles.Tir"){
+            else if(pojazd == "Tir"){
                 Tir Tir = new Tir();
                 iloscOsi =  Tir.liczbaOsi;
             }
